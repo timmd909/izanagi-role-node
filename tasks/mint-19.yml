@@ -1,0 +1,36 @@
+---
+
+#
+# Use NodeSource
+#
+# - name: "Add NodeJS PPA"
+#   apt_key:
+#     state: present
+#     url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+#
+# - name: "Add NodeJS APT"
+#   apt_repository:
+#     repo: deb https://deb.nodesource.com/node_10.x bionic main
+#     state: present
+#     update_cache: yes
+#
+# - name: "Add NodeJS source APT Repository"
+#   apt_repository:
+#     repo: deb-src https://deb.nodesource.com/node_10.x bionic main
+#     state: present
+#     update_cache: yes
+#
+# - name: "Install NodeJS"
+#   apt: name=nodejs state=latest
+
+#
+# Use distribution default
+#
+- name: "Install NodeJS"
+  apt: name=nodejs state=latest
+
+- name: "Install NPM"
+  apt: name=npm state=latest
+
+- name: Install Grunt CLI
+  apt: name=node-grunt-cli state=latest
