@@ -3,9 +3,6 @@
 - name: "Install NodeJS"
   apt: name=nodejs state=latest
 
-- name: "Install NPM"
-  apt: name=npm state=latest
-
 - name: Install Grunt CLI
   apt: name=node-grunt-cli state=latest
 
