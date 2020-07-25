@@ -1,0 +1,11 @@
+---
+
+- name: "Install NodeJS"
+  apt:
+    state: latest
+    name:
+      - nodejs
+      - npm
+
+- name: Install Grunt CLI
+  apt: name=node-grunt-cli state=latest

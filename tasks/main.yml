@@ -15,3 +15,8 @@
   become: yes
   become_user: root
   when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
+
+- include: ubuntu-20.04.yml
+  become: yes
+  become_user: root
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
