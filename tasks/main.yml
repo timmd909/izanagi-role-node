@@ -20,3 +20,8 @@
   become: yes
   become_user: root
   when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
+
+- include: raspbian.yml
+  become: yes
+  become_user: root
+  when: ansible_lsb.id == "Raspbian"
