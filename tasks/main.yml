@@ -1,21 +1,5 @@
 ---
 
-
-- include: mint-19.yml
-  become: yes
-  become_user: root
-  when: ansible_distribution == 'Linux Mint' and ansible_distribution_version == '19'
-
-- include: ubuntu-16.04.yml
-  become: yes
-  become_user: root
-  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '16.04'
-
-- include: ubuntu-18.04.yml
-  become: yes
-  become_user: root
-  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
-
 - include: ubuntu-20.04.yml
   become: yes
   become_user: root
