@@ -14,3 +14,6 @@
   become: yes
   become_user: root
   when: ansible_lsb.id == "Raspbian"
+
+- include: nvm.yml
+  when: node_install_nvm
